@@ -48,3 +48,25 @@ let c2 = Math.abs(difference(6, 1));
 console.log(c2);
 
 
+/*Выведите на экран текущую дату-время в формате 12:59:59 31.12.2014. 
+Для решения этой задачи напишите функцию, которая будет добавлять 0 
+перед днями и месяцами, которые состоят из одной цифры (из 1.9.2014 
+сделает 01.09.2014)*/
+
+const formating = (number, length, emptyValue) => number.toString().padStart(length, emptyValue);
+
+const getCurrentDate = (date) => {
+    const hours = formating(date.getHours(), 2, '0');
+    const minutes = formating(date.getMinutes(), 2, '0');
+    const seconds = formating(date.getSeconds(), 2, '0');
+    const monthDate = formating(date.getDate(), 2, '0');
+    const month = formating(date.getMonth(), 2, '0');
+    const year = date.getFullYear(); 
+    
+    return `${hours}:${minutes}:${seconds} ${monthDate}.${month}.${year}`
+};
+
+let currentDate = getCurrentDate(new Date());
+console.log(currentDate);
+
+
