@@ -23,4 +23,16 @@ console.log(str.substring(2, str.length-1));
 console.log(str.substr(2, 14));
 
 
+// Дан массив с элементами 4, 2, 5, 19, 13, 0, 10. Найдите квадратный корень 
+// из суммы кубов его элементов. Для решения воспользуйтесь циклом for
+
+const arr = [4, 2, 5, 19, 13, 0, 10];
+
+let sumOfCubes = 0;
+for(i = 0; i < arr.length; i++){
+    sumOfCubes += arr[i]**3;
+}
+const sqrtArr = Math.sqrt(sumOfCubes);
+console.log(sqrtArr);
+
 
