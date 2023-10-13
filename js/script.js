@@ -84,3 +84,17 @@ const parsResult = parsStr('aa aba abba abbba abca abea')
 console.log(parsResult)
 
 
+/*Напишите ф-цию строгой проверки ввода номер телефона в 
+международном формате (<код страны> <код города или сети> <номер 
+телефона>). Функция должна возвращать true или false. Используйте 
+регулярные выражения.*/
+
+const validTel = (str) => {
+    const regExp = /^(\+?\(?\d{1,3}\)?[- .]?)(\(?\d{2,3}\)?[- .]?)(\d{3}[- .]?\d{2}[- .]?\d{2})$/;
+    const testTel = regExp.test(str);
+    return testTel;
+}
+let result = validTel('+375293600404');
+console.log(result);
+
+
