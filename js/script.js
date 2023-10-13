@@ -70,3 +70,17 @@ let currentDate = getCurrentDate(new Date());
 console.log(currentDate);
 
 
+/*Дана строка 'aa aba abba abbba abca abea'. Напишите регулярку, которая 
+найдет строки aba, abba, abbba по шаблону: буква 'a', буква 'b' любое 
+количество раз, буква 'a'.*/
+
+const parsStr = (str) => {
+    const regExp = /(ab{1,}a)/g;
+    const partOfStr = str.match(regExp);
+    return partOfStr;
+}
+
+const parsResult = parsStr('aa aba abba abbba abca abea')
+console.log(parsResult)
+
+
