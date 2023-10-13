@@ -13,3 +13,14 @@ const newDate = `${arrDate[2]}/${arrDate[1]}/${arrDate[0]}`;
 console.log(newDate);
 
 
+// Дана строка «Я учу javascript!». Вырежете из нее слово «учу» и слово 
+// «javascript» тремя разными способами (через substr, substring, slice).
+
+const str = 'Я учу javascript!';
+
+console.log(str.slice(2, -1));
+console.log(str.substring(2, str.length-1));
+console.log(str.substr(2, 14));
+
+
+
