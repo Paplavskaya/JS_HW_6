@@ -36,3 +36,15 @@ const sqrtArr = Math.sqrt(sumOfCubes);
 console.log(sqrtArr);
 
 
+/*Даны переменные a и b. Отнимите от a переменную b и результат 
+присвойте переменной c. Сделайте так, чтобы в любом случае в переменную 
+c записалось положительное значение. Проверьте работу скрипта при a и b, 
+равных соответственно 3 и 5, 6 и 1.*/
+
+const difference = (a, b) => a - b;
+let c1 = Math.abs(difference(3, 5));
+console.log(c1);
+let c2 = Math.abs(difference(6, 1));
+console.log(c2);
+
+
